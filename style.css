@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -13,7 +12,6 @@ body {
     margin: 0 auto;
 }
 
-/* Navbar */
 .navbar {
     background-color: #A27B5C;
     color: #FDFDFD;
@@ -38,7 +36,6 @@ body {
     text-decoration: underline;
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
     padding: 3rem 1rem;
@@ -98,7 +95,6 @@ body {
     margin: 0.5rem 0;
 }
 
-/* Personal Section (Without Image) */
 #personal .about-text {
     margin: 0 auto;
     max-width: 600px; /* Batasi lebar teks untuk estetika */
@@ -111,7 +107,6 @@ body {
 }
 
 
-/* Skills Section */
 .skills-grid {
     display: flex;
     gap: 1rem;
@@ -130,7 +125,6 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Projects Section */
 .projects-grid {
     display: flex;
     gap: 1.5rem;
@@ -157,7 +151,6 @@ body {
     margin: 0.5rem 0;
 }
 
-/* Certificates Section */
 .certificate-grid {
     display: flex;
     gap: 1.5rem;
@@ -188,12 +181,10 @@ body {
     margin: 0.5rem 1rem;
 }
 
-/* Contact Section */
 section#contact {
     text-align: center;
 }
 
-/* Footer */
 .footer {
     text-align: center;
     background-color: #5B4424;
@@ -201,12 +192,10 @@ section#contact {
     padding: 1rem 0;
 }
 
-/* Smooth Transition for Cards */
 .project-card, .certificate-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Button Hover Effect */
 .btn {
     transition: all 0.3s ease;
 }
