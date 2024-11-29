@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: 'Poppins', sans-serif;
     background-color: #cbfff2;
     display: flex;
@@ -7,10 +7,10 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
-}
+} */
 
 .calculator {
-    background-image: url('background.jpg'); 
+    background-image: url('dental_bg.jpg'); 
     background-size: cover; 
     background-position: center; 
     border-radius: 15px;
@@ -19,6 +19,8 @@ body {
     padding: 20px;
     text-align: center;
     position: relative;
+    margin: auto;
+    top: 50px;
 }
 
 
