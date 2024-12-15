@@ -1,4 +1,3 @@
-// Smooth Scrolling
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -11,7 +10,6 @@ document.querySelectorAll('.navbar a').forEach(link => {
     });
 });
 
-// Hover Animation for Cards
 document.querySelectorAll('.project-card, .certificate-card').forEach(card => {
     card.addEventListener('mouseover', () => {
         card.style.transform = 'scale(1.05)';

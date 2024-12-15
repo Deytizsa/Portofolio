@@ -1,4 +1,3 @@
-// Data awal untuk tabel dan chart
 const allData = {
     labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
     datasets: [
@@ -19,21 +18,18 @@ const allData = {
     ]
 };
 
-// Fungsi untuk mengisi tabel
 function populateTable(selectedYear) {
     const tableBody = document.getElementById('dataTable').querySelector('tbody');
-    tableBody.innerHTML = ''; // Hapus isi tabel sebelumnya
+    tableBody.innerHTML = ''; 
 
     allData.datasets.forEach(dataset => {
         if (selectedYear === 'all' || dataset.label === selectedYear) {
             const row = document.createElement('tr');
 
-            // Tambah kolom tahun
             const yearCell = document.createElement('td');
             yearCell.textContent = dataset.label;
             row.appendChild(yearCell);
 
-            // Tambah data penjualan per bulan
             dataset.data.forEach(value => {
                 const dataCell = document.createElement('td');
                 dataCell.textContent = value;
@@ -45,7 +41,6 @@ function populateTable(selectedYear) {
     });
 }
 
-// Inisialisasi Chart.js
 const ctx = document.getElementById('myChart').getContext('2d');
 const chart = new Chart(ctx, {
     type: 'bar',
@@ -79,21 +74,17 @@ const chart = new Chart(ctx, {
     }
 });
 
-// Event filter berdasarkan tahun
 document.getElementById('yearFilter').addEventListener('change', function () {
     const selectedYear = this.value;
 
-    // Filter dataset berdasarkan pilihan tahun
     if (selectedYear === 'all') {
         chart.data.datasets = allData.datasets;
     } else {
         chart.data.datasets = allData.datasets.filter(dataset => dataset.label === selectedYear);
     }
 
-    // Perbarui tabel dan chart
     populateTable(selectedYear);
     chart.update();
 });
 
-// Isi tabel awal
 populateTable('all');
