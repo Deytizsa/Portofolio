@@ -13,7 +13,9 @@ body {
 }
 
 .navbar {
-    background-color: #A27B5C;
+    background-image: url('webbg.jpg');
+    background-size: cover;  /* Ensures the image covers the entire navbar */
+    background-position: center;  /* Centers the background image */
     color: #FDFDFD;
     display: flex;
     justify-content: space-between;
@@ -25,8 +27,9 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .navbar a {
-    color: #FDFDFD;
+    color: #0c0b0b;
     text-decoration: none;
     margin: 0 1rem;
     font-weight: 500;
@@ -35,12 +38,13 @@ body {
 .navbar a:hover {
     text-decoration: underline;
 }
-
 .hero {
     text-align: center;
     padding: 3rem 1rem;
-    background: linear-gradient(135deg, #F4DFBA, #A27B5C);
-    color: #FDFDFD;
+    background-image: url('webbg.jpg');
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    color: #000000; /* Change text color to black */
 }
 
 .hero h1 {
@@ -48,7 +52,7 @@ body {
 }
 
 .hero .highlight {
-    color: #F4DFBA;
+    color: #000000; /* Update highlight color to black */
 }
 
 .hero .btn {
@@ -106,6 +110,25 @@ body {
     margin: 0.5rem 0;
 }
 
+.experience-grid, .education-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.experience-item, .education-item {
+    background-color: #D9C3A5;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.experience-item h4, .education-item h4 {
+    margin-bottom: 0.5rem;
+}
 
 .skills-grid {
     display: flex;
@@ -119,6 +142,19 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px; /* Menetapkan lebar tetap untuk item */
+    height: 200px; /* Menetapkan tinggi tetap untuk item */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menyusun konten secara vertikal */
+    justify-content: center; /* Menyusun konten secara horizontal */
+}
+
+.skill-icon {
+    width: 40%; /* Membuat gambar menyesuaikan lebar kontainer */
+    height: auto; /* Mempertahankan rasio gambar */
+    object-fit: contain; /* Memastikan gambar tidak terdistorsi */
+    margin-bottom: 0.5rem; /* Memberi jarak antara gambar dan teks */
 }
 
 .skill-item h4 {
