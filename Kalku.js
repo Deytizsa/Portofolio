@@ -1,21 +1,17 @@
 let resultField = document.getElementById("result");
 
-// Append value to the display
 function appendValue(value) {
     resultField.value += value;
 }
 
-// Clear the display
 function clearResult() {
     resultField.value = "";
 }
 
-// Delete the last character
 function deleteLast() {
     resultField.value = resultField.value.slice(0, -1);
 }
 
-// Calculate the result
 function calculate() {
     try {
         resultField.value = eval(resultField.value);
@@ -25,7 +21,6 @@ function calculate() {
     }
 }
 
-// Add keyboard functionality
 document.addEventListener("keydown", (event) => {
     const key = event.key;
     if (!isNaN(key) || "+-*/.".includes(key)) {

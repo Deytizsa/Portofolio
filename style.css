@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -27,7 +28,6 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 .navbar a {
     color: #0c0b0b;
     text-decoration: none;
@@ -38,6 +38,7 @@ body {
 .navbar a:hover {
     text-decoration: underline;
 }
+
 .hero {
     text-align: center;
     padding: 3rem 1rem;
@@ -91,7 +92,6 @@ body {
     margin: auto 0;
     border-radius: 10px; 
 }
-
 
 .about-text p {
     margin: 0.5rem 0;
@@ -239,4 +239,44 @@ section#contact {
     color: #5B4424;
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .experience-item, .education-item, .project-card, .certificate-card {
+        width: 100%; /* Lebar penuh */
+    }
+
+    .skills-grid {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .skill-item {
+        width: 100px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero .btn {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
 }
