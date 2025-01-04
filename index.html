@@ -123,36 +123,44 @@
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-heading">Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="project-1">Project 1</button>
+                <button class="filter-btn" data-filter="project-2">Project 2</button>
+                <button class="filter-btn" data-filter="project-3">Project 3</button>
+                <button class="filter-btn" data-filter="project-4">Project 4</button>
+                <button class="filter-btn" data-filter="project-uts">Project UTS</button>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card project-1">
                     <a href="login.html">
                         <img src="Login.png" alt="Project 1">
                         <h5>Project 1</h5>
                         <p>Form Login.</p>
                     </a>
                 </div>
-                <div class="project-card">
+                <div class="project-card project-2">
                     <a href="kalkulator.html">
                         <img src="Calculator.png" alt="Project 2">
                         <h5>Project 2</h5>
                         <p>Calculator.</p>
                     </a>
                 </div>
-                <div class="project-card">
+                <div class="project-card project-3">
                     <a href="game.html">
                         <img src="Game.png" alt="Project 3">
                         <h5>Project 3</h5>
                         <p>Snake Game.</p>
                     </a>
                 </div>
-                <div class="project-card">
+                <div class="project-card project-4">
                     <a href="sales.html">
                         <img src="Sales.png" alt="Project 4">
                         <h5>Project 4</h5>
                         <p>Sales Chart.</p>
                     </a>
                 </div>
-                <div class="project-card">
+                <div class="project-card project-uts">
                     <a href="https://deytizsa.github.io/Deytizsa_Putri_Nur_Azizah_05TPLE004/">
                         <img src="Dashboard.png" alt="Project UTS">
                         <h5>Project UTS</h5>
@@ -162,6 +170,28 @@
             </div>
         </div>
     </section>
+    
+    <script>
+        // Filter functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll(".filter-btn");
+            const projectCards = document.querySelectorAll(".project-card");
+    
+            filterButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const filter = button.getAttribute("data-filter");
+    
+                    projectCards.forEach((card) => {
+                        if (filter === "all" || card.classList.contains(filter)) {
+                            card.style.display = "block";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+    </script>    
 
     <section id="certificates" class="section">
         <div class="container">
