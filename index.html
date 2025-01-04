@@ -192,7 +192,6 @@
             });
         });
     </script>    
-
 <section id="certificates" class="section">
     <div class="container">
         <h2 class="section-heading">Certificates</h2>
@@ -202,6 +201,7 @@
             <button class="filter-btn" data-filter="sololearn">Sertifikat SoloLearn</button>
         </div>
         <div class="certificate-grid">
+            <!-- National Seminar Certificates (seminar filter) -->
             <div class="certificate-card seminar">
                 <a href="https://drive.google.com/file/d/1Pp4UUYS-fbpwAv5uzRHrhrXLjGExQPbi/view?usp=drive_link" target="_blank">
                     <img src="CS1.jpg" alt="Certificate 1">
@@ -237,6 +237,8 @@
                     <p>National Seminar 5.</p>
                 </a>
             </div>
+
+            <!-- SoloLearn Certificates (sololearn filter) -->
             <div class="certificate-card sololearn">
                 <a href="https://www.sololearn.com/certificates/CC-CMNMTSPS" target="_blank">
                     <img src="HTML Intro.jpg" alt="Certificate 6">
@@ -269,8 +271,69 @@
     </div>
 </section>
 
+<style>
+    .filter-buttons {
+        margin-bottom: 20px;
+    }
+
+    .filter-btn {
+        padding: 10px 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .filter-btn:hover {
+        background-color: #45a049;
+    }
+
+    .certificate-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .certificate-card {
+        width: calc(33.333% - 20px);
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .certificate-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .certificate-card h5 {
+        margin-top: 10px;
+    }
+
+    .certificate-card p {
+        color: #555;
+    }
+
+    /* Default style: hide all certificates initially */
+    .certificate-card {
+        display: none;
+    }
+
+    /* Show cards with seminar class */
+    .seminar {
+        display: block;
+    }
+
+    /* Show cards with sololearn class */
+    .sololearn {
+        display: block;
+    }
+</style>
+
 <script>
-    // Filter functionality
     document.addEventListener("DOMContentLoaded", () => {
         const filterButtons = document.querySelectorAll(".filter-btn");
         const certificateCards = document.querySelectorAll(".certificate-card");
@@ -280,6 +343,7 @@
                 const filter = button.getAttribute("data-filter");
 
                 certificateCards.forEach((card) => {
+                    // Default to showing all certificates
                     if (filter === "all" || card.classList.contains(filter)) {
                         card.style.display = "block";
                     } else {
@@ -290,7 +354,6 @@
         });
     });
 </script>
-    
 
     <section id="contact" class="section bg-light">
         <div class="container">
